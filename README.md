@@ -2,7 +2,7 @@
 ## Home Assignment
 
 ### Get started
-At first, we need to log in to Vimeo to create an account.
+First step, we need to log in to Vimeo to create an account.
 after that, we need to register our app so we can make API calls.
 
 ### Generate an access token
@@ -43,6 +43,10 @@ comment = client.post('https://api.vimeo.com/videos/277905407/comments',
 ### Printing the number of likes and views
 To get the data that we want, we use the get method, storing the video data in a variable in a JSON format, and then we use JSONPath to filter the JSON data and find the paths of likes and views.
 
+```
+# get the data in a json format
+data = client.get('https://api.vimeo.com/videos/277905407').json()
+```
 ```
 "stats": {
     "plays": 213496
